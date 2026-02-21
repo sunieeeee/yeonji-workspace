@@ -1,0 +1,10 @@
+{
+  "name": "yeonji-workspace",
+  "private": true,
+  "scripts": {
+    "dev:excel": "pnpm -C apps/excel-grid dev",
+    "dev:site": "pnpm -C apps/yeonji-site dev",
+    "dev:ui": "pnpm -C packages/yeonji-ui dev",
+    "build": "pnpm -r build"
+  }
+}

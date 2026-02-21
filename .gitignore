@@ -1,0 +1,10 @@
+node_modules
+dist
+.next
+out
+.vite
+.DS_Store
+.env
+.env.*
+pnpm-debug.log*
+npm-debug.log*
