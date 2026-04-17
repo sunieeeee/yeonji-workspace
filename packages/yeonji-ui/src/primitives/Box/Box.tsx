@@ -5,7 +5,7 @@ import {
 	type Ref,
 	forwardRef,
 } from "react";
-import type { BaseProps } from "../types/base.types";
+import type { BaseProps } from "../../types/base.types";
 
 type BoxOwnProps<T extends ElementType> = {
 	as?: T;
