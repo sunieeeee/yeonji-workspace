@@ -1,7 +1,8 @@
 import React, { useId } from "react";
 import { Label } from "../label";
+import { BaseProps } from "../../types/base.types";
 
-type FormFieldProps = {
+type FormFieldProps = BaseProps & {
 	id: string;
 	label: string;
 	errorText?: string;
@@ -11,8 +12,6 @@ type FormFieldProps = {
 	fullWidth?: boolean;
 	size?: "sm" | "md" | "lg";
 	layout?: "vertical" | "horizontal";
-	className?: string;
-	sx?: React.CSSProperties;
 	labelSx?: React.CSSProperties;
 };
 
@@ -43,9 +42,16 @@ const FormField = (
 			data-full-width={fullWidth}
 			className={className}
 			style={{ ...sx }}
+			aria-disabled={disabled}
+			aria-invalid={invalid}
+			aria-required={required}
+			aria-describedby={errorText ? `${controlId}-error` : undefined}
+			aria-labelledby={label ? `${controlId}-label` : undefined}
+			aria-controls={controlId}
 		>
 			{label && (
 				<Label
+					id={`${controlId}-label`}
 					htmlFor={controlId}
 					label={label}
 					required={required}
@@ -55,7 +61,11 @@ const FormField = (
 			<div>
 				{children}
 				{errorText && (
-					<div data-error className="error-text">
+					<div
+						id={`${controlId}-error`}
+						data-error={invalid}
+						className="error-text"
+					>
 						{errorText}
 					</div>
 				)}

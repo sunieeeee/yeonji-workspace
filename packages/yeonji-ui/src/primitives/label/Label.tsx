@@ -5,15 +5,21 @@ export type LabelProps = {
 	required?: boolean;
 	htmlFor?: string;
 	sx?: React.CSSProperties;
+	id?: string;
 };
 
-const Label = ({ label, required, htmlFor, sx }: LabelProps) => {
+const Label = ({ label, required, htmlFor, sx, id }: LabelProps) => {
 	return (
 		<label
+			id={id}
 			htmlFor={htmlFor}
 			data-required={required}
 			className={styles.labelField}
 			style={sx}
+			aria-required={required}
+			aria-label={label}
+			aria-describedby={required ? `${id}-required` : undefined}
+			aria-controls={htmlFor}
 		>
 			{label}
 			{required && <span aria-hidden="true">*</span>}

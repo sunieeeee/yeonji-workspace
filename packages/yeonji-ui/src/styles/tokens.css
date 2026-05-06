@@ -1,0 +1,119 @@
+:root {
+	color-scheme: light;
+
+	--yj-font-sans:
+		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+
+	--yj-color-white: #ffffff;
+	--yj-color-black: #0b1020;
+
+	--yj-color-primary-25: #fbfbff;
+	--yj-color-primary-50: #f4f5ff;
+	--yj-color-primary-100: #e8ebff;
+	--yj-color-primary-200: #d5dcff;
+	--yj-color-primary-300: #aebcff;
+	--yj-color-primary-400: #8294ff;
+	--yj-color-primary-500: #5f6ff2;
+	--yj-color-primary-600: #4f46e5;
+	--yj-color-primary-700: #4338ca;
+	--yj-color-primary-800: #3730a3;
+	--yj-color-primary-900: #312e81;
+
+	--yj-color-cyan-50: #ecfeff;
+	--yj-color-cyan-100: #cffafe;
+	--yj-color-cyan-500: #06b6d4;
+	--yj-color-cyan-600: #0891b2;
+
+	--yj-color-gray-25: #fcfcfd;
+	--yj-color-gray-50: #f8fafc;
+	--yj-color-gray-100: #f1f5f9;
+	--yj-color-gray-200: #e2e8f0;
+	--yj-color-gray-300: #cbd5e1;
+	--yj-color-gray-400: #94a3b8;
+	--yj-color-gray-500: #64748b;
+	--yj-color-gray-600: #475569;
+	--yj-color-gray-700: #334155;
+	--yj-color-gray-800: #1e293b;
+	--yj-color-gray-900: #0f172a;
+
+	--yj-color-success-50: #ecfdf5;
+	--yj-color-success-100: #d1fae5;
+	--yj-color-success-500: #10b981;
+	--yj-color-success-600: #059669;
+	--yj-color-success-700: #047857;
+
+	--yj-color-warning-50: #fffbeb;
+	--yj-color-warning-100: #fef3c7;
+	--yj-color-warning-500: #f59e0b;
+	--yj-color-warning-600: #d97706;
+	--yj-color-warning-700: #b45309;
+
+	--yj-color-danger-50: #fff1f2;
+	--yj-color-danger-100: #ffe4e6;
+	--yj-color-danger-500: #f43f5e;
+	--yj-color-danger-600: #e11d48;
+	--yj-color-danger-700: #be123c;
+
+	--yj-color-info-50: #eff6ff;
+	--yj-color-info-100: #dbeafe;
+	--yj-color-info-500: #3b82f6;
+	--yj-color-info-600: #2563eb;
+
+	--yj-color-bg-page: #f5f7fb;
+	--yj-color-bg-surface: #ffffff;
+	--yj-color-bg-subtle: #f8fafc;
+	--yj-color-bg-elevated: rgba(255, 255, 255, 0.92);
+
+	--yj-color-text-primary: #172033;
+	--yj-color-text-secondary: #475569;
+	--yj-color-text-tertiary: #64748b;
+	--yj-color-text-placeholder: #94a3b8;
+	--yj-color-text-disabled: #a8b3c5;
+
+	--yj-color-border: #e2e8f0;
+	--yj-color-border-strong: #cbd5e1;
+	--yj-color-border-focus: #5f6ff2;
+
+	--yj-space-0: 0;
+	--yj-space-1: 0.4rem;
+	--yj-space-2: 0.8rem;
+	--yj-space-3: 1.2rem;
+	--yj-space-4: 1.6rem;
+	--yj-space-5: 2rem;
+	--yj-space-6: 2.4rem;
+	--yj-space-7: 2.8rem;
+	--yj-space-8: 3.2rem;
+	--yj-space-10: 4rem;
+	--yj-space-12: 4.8rem;
+
+	--yj-radius-none: 0;
+	--yj-radius-xs: 0.4rem;
+	--yj-radius-sm: 0.6rem;
+	--yj-radius-md: 0.8rem;
+	--yj-radius-lg: 1.2rem;
+	--yj-radius-xl: 1.6rem;
+	--yj-radius-2xl: 2rem;
+	--yj-radius-full: 999rem;
+
+	--yj-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+	--yj-shadow-sm: 0 4px 10px rgba(15, 23, 42, 0.06);
+	--yj-shadow-md: 0 12px 28px rgba(15, 23, 42, 0.1);
+	--yj-shadow-lg: 0 20px 48px rgba(15, 23, 42, 0.14);
+	--yj-shadow-focus: 0 0 0 3px rgba(95, 111, 242, 0.18);
+
+	--yj-z-dropdown: 1000;
+	--yj-z-popover: 1100;
+	--yj-z-drawer: 1200;
+	--yj-z-modal: 1300;
+	--yj-z-toast: 1400;
+
+	--yj-duration-fast: 120ms;
+	--yj-duration-base: 180ms;
+	--yj-duration-slow: 260ms;
+	--yj-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+	--yj-control-height-sm: 3.2rem;
+	--yj-control-height-md: 3.8rem;
+	--yj-control-height-lg: 4.6rem;
+}

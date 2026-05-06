@@ -1,10 +1,10 @@
-type FlexProps = {
+import type { BaseProps } from "../../types/base.types";
+
+export type FlexProps = BaseProps & {
 	flexDirection?: "row" | "column";
 	alignItems?: "flex-start" | "center" | "flex-end";
 	justifyContent?: "flex-start" | "center" | "flex-end" | "space-between";
 	gap?: string;
-	className?: string;
-	sx?: React.CSSProperties;
 	children: React.ReactNode;
 };
 
