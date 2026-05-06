@@ -6,15 +6,32 @@ import type { ComponentPropsWithoutRef } from "react";
 type InputOwnProps = BaseProps & {
 	size?: "sm" | "md" | "lg";
 	type?: "text" | "password" | "email" | "number";
+	placeholder?: string;
+	value?: string;
+	onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export type InputProps = InputOwnProps &
 	Omit<ComponentPropsWithoutRef<"input">, keyof InputOwnProps>;
 
-const Input = ({ size = "md", type = "text", ...props }: InputProps) => {
+const Input = ({
+	size = "md",
+	type = "text",
+	placeholder,
+	value,
+	onChange,
+	...props
+}: InputProps) => {
 	return (
 		<div className={styles.root} data-size={size}>
-			<input className={styles.field} type={type} {...props} />
+			<input
+				className={styles.field}
+				type={type}
+				placeholder={placeholder}
+				value={value}
+				onChange={onChange}
+				{...props}
+			/>
 		</div>
 	);
 };

@@ -1,11 +1,11 @@
-export { Box } from "./primitives/Box";
-export type { BoxProps } from "./primitives/Box";
+export { Box } from "./primitives/box";
+export type { BoxProps } from "./primitives/box";
 
-export { Input } from "./primitives/Input";
-export type { InputProps } from "./primitives/Input";
+export { Input } from "./primitives/input";
+export type { InputProps } from "./primitives/input";
 
-export { Layout } from "./primitives/Layout";
-export type { LayoutProps } from "./primitives/Layout";
+export { Layout } from "./primitives/layout";
+export type { LayoutProps } from "./primitives/layout";
 
-export { Typography, Heading, Text } from "./primitives/Typography";
-export type { HeadingProps, TextProps } from "./primitives/Typography";
+export { Typography, Heading, Text } from "./primitives/typography";
+export type { HeadingProps, TextProps } from "./primitives/typography";

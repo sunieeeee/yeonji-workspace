@@ -1,4 +1,4 @@
-import Box, { type BoxProps } from "../Box";
+import Box, { type BoxProps } from "../box";
 
 export type LayoutProps = BoxProps;
 

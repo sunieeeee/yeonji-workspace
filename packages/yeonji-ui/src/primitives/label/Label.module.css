@@ -1,0 +1,14 @@
+.labelField {
+	font-size: 13px;
+	font-weight: 700;
+	color: #172033;
+}
+.labelField[data-required="true"] {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+
+	span {
+		color: #e11d48;
+	}
+}
