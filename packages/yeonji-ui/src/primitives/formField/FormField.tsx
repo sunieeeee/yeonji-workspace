@@ -1,6 +1,7 @@
 import React, { useId } from "react";
 import { Label } from "../label";
 import { BaseProps } from "../../types/base.types";
+import styles from "./FormField.module.css";
 
 type FormFieldProps = BaseProps & {
 	id: string;
@@ -13,25 +14,24 @@ type FormFieldProps = BaseProps & {
 	size?: "sm" | "md" | "lg";
 	layout?: "vertical" | "horizontal";
 	labelSx?: React.CSSProperties;
+	children?: React.ReactNode;
 };
 
-const FormField = (
-	{
-		id,
-		label,
-		errorText,
-		required,
-		disabled,
-		invalid,
-		fullWidth,
-		size,
-		layout,
-		className,
-		sx,
-		labelSx,
-	}: FormFieldProps,
-	children: React.ReactNode,
-) => {
+const FormField = ({
+	id,
+	label,
+	errorText,
+	required,
+	disabled,
+	invalid,
+	fullWidth,
+	size,
+	layout,
+	className,
+	sx,
+	labelSx,
+	children,
+}: FormFieldProps) => {
 	const controlId = id ?? `yj-field-${useId().replace(/:/g, "")}`;
 	return (
 		<div
@@ -40,7 +40,7 @@ const FormField = (
 			data-disabled={disabled}
 			data-invalid={invalid}
 			data-full-width={fullWidth}
-			className={className}
+			className={`${styles.root}${className ? ` ${className}` : ""}`}
 			style={{ ...sx }}
 			aria-disabled={disabled}
 			aria-invalid={invalid}
@@ -55,16 +55,17 @@ const FormField = (
 					htmlFor={controlId}
 					label={label}
 					required={required}
+					className={styles.label}
 					sx={labelSx}
 				/>
 			)}
-			<div>
+			<div className={styles.control}>
 				{children}
 				{errorText && (
 					<div
 						id={`${controlId}-error`}
 						data-error={invalid}
-						className="error-text"
+						className={styles.errorText}
 					>
 						{errorText}
 					</div>

@@ -1,0 +1,56 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	gap: var(--yj-space-2);
+	width: fit-content;
+	max-width: 100%;
+	color: var(--yj-color-text-default);
+}
+
+.root[data-full-width="true"] {
+	width: 100%;
+}
+
+.root[data-layout="horizontal"] {
+	flex-direction: row;
+	align-items: flex-start;
+	gap: var(--yj-space-3);
+}
+
+.label {
+	flex-shrink: 0;
+}
+
+.root[data-layout="horizontal"] .label {
+	padding-top: calc((var(--yj-control-height-md) - 13px) / 2);
+}
+
+.root[data-size="sm"][data-layout="horizontal"] .label {
+	padding-top: calc((var(--yj-control-height-sm) - 13px) / 2);
+}
+
+.root[data-size="lg"][data-layout="horizontal"] .label {
+	padding-top: calc((var(--yj-control-height-lg) - 13px) / 2);
+}
+
+.root[data-disabled="true"] {
+	color: var(--yj-color-text-state-disabled);
+}
+
+.control {
+	display: flex;
+	flex-direction: column;
+	gap: var(--yj-space-1);
+	width: 100%;
+	min-width: 0;
+}
+
+.errorText {
+	color: var(--yj-color-danger-600);
+	font-size: 1.2rem;
+	line-height: 1.4;
+}
+
+.errorText[data-error="false"] {
+	color: var(--yj-color-text-muted);
+}

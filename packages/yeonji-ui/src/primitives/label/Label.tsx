@@ -6,15 +6,16 @@ export type LabelProps = {
 	htmlFor?: string;
 	sx?: React.CSSProperties;
 	id?: string;
+	className?: string;
 };
 
-const Label = ({ label, required, htmlFor, sx, id }: LabelProps) => {
+const Label = ({ label, required, htmlFor, sx, id, className }: LabelProps) => {
 	return (
 		<label
 			id={id}
 			htmlFor={htmlFor}
 			data-required={required}
-			className={styles.labelField}
+			className={`${styles.labelField}${className ? ` ${className}` : ""}`}
 			style={sx}
 			aria-required={required}
 			aria-label={label}

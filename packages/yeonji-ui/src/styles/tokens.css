@@ -1,12 +1,18 @@
 :root {
 	color-scheme: light;
 
+	/* Primitive: typography */
 	--yj-font-sans:
 		Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 		"Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
 
+	/* Primitive: color palette */
 	--yj-color-white: #ffffff;
 	--yj-color-black: #0b1020;
+	--yj-color-white-alpha-92: rgba(255, 255, 255, 0.92);
+	--yj-color-ink-900: #172033;
+	--yj-color-ink-400: #a8b3c5;
+	--yj-color-page-50: #f5f7fb;
 
 	--yj-color-primary-25: #fbfbff;
 	--yj-color-primary-50: #f4f5ff;
@@ -60,21 +66,59 @@
 	--yj-color-info-500: #3b82f6;
 	--yj-color-info-600: #2563eb;
 
-	--yj-color-bg-page: #f5f7fb;
-	--yj-color-bg-surface: #ffffff;
-	--yj-color-bg-subtle: #f8fafc;
-	--yj-color-bg-elevated: rgba(255, 255, 255, 0.92);
+	/* Semantic: surface */
+	--yj-color-surface-page: var(--yj-color-page-50);
+	--yj-color-surface-default: var(--yj-color-white);
+	--yj-color-surface-subtle: var(--yj-color-gray-50);
+	--yj-color-surface-elevated: var(--yj-color-white-alpha-92);
 
-	--yj-color-text-primary: #172033;
-	--yj-color-text-secondary: #475569;
-	--yj-color-text-tertiary: #64748b;
-	--yj-color-text-placeholder: #94a3b8;
-	--yj-color-text-disabled: #a8b3c5;
+	/* Semantic: surface state */
+	--yj-color-surface-state-hover: var(--yj-color-gray-25);
+	--yj-color-surface-state-active: var(--yj-color-gray-100);
+	--yj-color-surface-state-disabled: var(--yj-color-gray-100);
 
-	--yj-color-border: #e2e8f0;
-	--yj-color-border-strong: #cbd5e1;
-	--yj-color-border-focus: #5f6ff2;
+	/* Semantic: text */
+	--yj-color-text-default: var(--yj-color-ink-900);
+	--yj-color-text-muted: var(--yj-color-gray-600);
+	--yj-color-text-subtle: var(--yj-color-gray-500);
 
+	/* Semantic: text state */
+	--yj-color-text-state-placeholder: var(--yj-color-gray-400);
+	--yj-color-text-state-disabled: var(--yj-color-ink-400);
+
+	/* Semantic: border */
+	--yj-color-border-default: var(--yj-color-gray-200);
+	--yj-color-border-strong: var(--yj-color-gray-300);
+
+	/* Semantic: border state */
+	--yj-color-border-state-hover: var(--yj-color-gray-300);
+	--yj-color-border-state-active: var(--yj-color-gray-400);
+	--yj-color-border-state-disabled: var(--yj-color-gray-100);
+	--yj-color-border-state-focus-ring: var(--yj-color-primary-500);
+
+	/* Component: input */
+	--yj-input-height-sm: var(--yj-control-height-sm);
+	--yj-input-height-md: var(--yj-control-height-md);
+	--yj-input-height-lg: var(--yj-control-height-lg);
+	--yj-input-padding-inline-sm: var(--yj-space-2);
+	--yj-input-padding-inline-md: var(--yj-space-3);
+	--yj-input-padding-inline-lg: var(--yj-space-4);
+	--yj-input-radius: var(--yj-radius-xs);
+	--yj-input-bg: var(--yj-color-surface-default);
+	--yj-input-bg-hover: var(--yj-color-surface-state-hover);
+	--yj-input-bg-active: var(--yj-color-surface-state-active);
+	--yj-input-bg-disabled: var(--yj-color-surface-state-disabled);
+	--yj-input-text: var(--yj-color-text-default);
+	--yj-input-text-placeholder: var(--yj-color-text-state-placeholder);
+	--yj-input-text-disabled: var(--yj-color-text-state-disabled);
+	--yj-input-border: var(--yj-color-border-default);
+	--yj-input-border-hover: var(--yj-color-border-state-hover);
+	--yj-input-border-active: var(--yj-color-border-state-active);
+	--yj-input-border-disabled: var(--yj-color-border-state-disabled);
+	--yj-input-border-focus: var(--yj-color-border-state-focus-ring);
+	--yj-input-shadow-focus: var(--yj-shadow-focus);
+
+	/* Primitive: spacing */
 	--yj-space-0: 0;
 	--yj-space-1: 0.4rem;
 	--yj-space-2: 0.8rem;
@@ -87,6 +131,7 @@
 	--yj-space-10: 4rem;
 	--yj-space-12: 4.8rem;
 
+	/* Primitive: radius */
 	--yj-radius-none: 0;
 	--yj-radius-xs: 0.4rem;
 	--yj-radius-sm: 0.6rem;
@@ -96,24 +141,28 @@
 	--yj-radius-2xl: 2rem;
 	--yj-radius-full: 999rem;
 
+	/* Primitive: shadow */
 	--yj-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
 	--yj-shadow-sm: 0 4px 10px rgba(15, 23, 42, 0.06);
 	--yj-shadow-md: 0 12px 28px rgba(15, 23, 42, 0.1);
 	--yj-shadow-lg: 0 20px 48px rgba(15, 23, 42, 0.14);
 	--yj-shadow-focus: 0 0 0 3px rgba(95, 111, 242, 0.18);
 
+	/* Primitive: layering */
 	--yj-z-dropdown: 1000;
 	--yj-z-popover: 1100;
 	--yj-z-drawer: 1200;
 	--yj-z-modal: 1300;
 	--yj-z-toast: 1400;
 
+	/* Primitive: motion */
 	--yj-duration-fast: 120ms;
 	--yj-duration-base: 180ms;
 	--yj-duration-slow: 260ms;
 	--yj-ease-standard: cubic-bezier(0.2, 0, 0, 1);
 
-	--yj-control-height-sm: 3.2rem;
-	--yj-control-height-md: 3.8rem;
-	--yj-control-height-lg: 4.6rem;
+	/* Primitive: control sizing */
+	--yj-control-height-sm: 30px;
+	--yj-control-height-md: 34px;
+	--yj-control-height-lg: 38px;
 }
