@@ -1,3 +1,4 @@
+import { forwardRef, type ReactNode } from "react";
 import type { BaseProps } from "../../types/base.types";
 
 export type FlexProps = BaseProps & {
@@ -5,34 +6,34 @@ export type FlexProps = BaseProps & {
 	alignItems?: "flex-start" | "center" | "flex-end";
 	justifyContent?: "flex-start" | "center" | "flex-end" | "space-between";
 	gap?: string;
-	children: React.ReactNode;
+	children: ReactNode;
 };
 
-const Flex = ({
-	flexDirection,
-	alignItems,
-	justifyContent,
-	gap,
-	className,
-	sx,
-	children,
-}: FlexProps) => {
-	return (
-		<div
-			style={{
-				display: "flex",
-				flexDirection,
-				alignItems,
-				justifyContent,
-				gap,
-				...sx,
-			}}
-			className={className}
-		>
-			{children}
-		</div>
-	);
-};
+const Flex = forwardRef<HTMLDivElement, FlexProps>(
+	(
+		{ flexDirection, alignItems, justifyContent, gap, className, sx, children },
+		ref,
+	) => {
+		return (
+			<div
+				ref={ref}
+				style={{
+					display: "flex",
+					flexDirection,
+					alignItems,
+					justifyContent,
+					gap,
+					...sx,
+				}}
+				className={className}
+			>
+				{children}
+			</div>
+		);
+	},
+);
+
+Flex.displayName = "Flex";
 
 export { Flex };
 export default Flex;
