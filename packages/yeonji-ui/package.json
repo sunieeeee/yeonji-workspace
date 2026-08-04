@@ -19,10 +19,7 @@
 			"require": "./dist/index.cjs"
 		},
 		"./index.css": "./dist/index.css",
-		"./reset.css": "./dist/reset.css",
-		"./tokens.css": "./dist/tokens.css",
-		"./theme.css": "./dist/theme.css",
-		"./styles.css": "./dist/styles.css"
+		"./reset.css": "./dist/reset.css"
 	},
 	"scripts": {
 		"build": "tsup",
@@ -33,10 +30,13 @@
 		"react-dom": "^18"
 	},
 	"devDependencies": {
-		"esbuild": "^0.25.5",
 		"@types/react": "^18.3.28",
 		"@types/react-dom": "^18.3.7",
+		"@vanilla-extract/esbuild-plugin": "^2.3.22",
 		"tsup": "^8.5.1",
 		"typescript": "^5.9.3"
+	},
+	"dependencies": {
+		"@vanilla-extract/css": "^1.21.2"
 	}
 }
