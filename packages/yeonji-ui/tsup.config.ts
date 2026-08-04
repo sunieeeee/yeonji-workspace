@@ -2,7 +2,7 @@ import { defineConfig } from "tsup";
 import { vanillaExtractPlugin } from "@vanilla-extract/esbuild-plugin";
 export default defineConfig({
 	// 어떤 소스 파일부터 빌드 시작할지
-	entry: ["src/index.ts", "src/reset.ts"],
+	entry: ["src/index.ts"],
 
 	// 결과물을 ESM(import)과 CJS(require) 두 형식으로 각각 생성
 	format: ["esm", "cjs"],

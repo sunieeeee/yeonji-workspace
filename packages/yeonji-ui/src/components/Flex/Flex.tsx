@@ -1,13 +1,13 @@
 import { forwardRef, type ReactNode } from "react";
 import type { BaseProps } from "../../types/base.types";
+import { primitive } from "../../theme";
+import { root } from "./Flex.css";
+import { RecipeVariants } from "@vanilla-extract/recipes";
 
-export type FlexProps = BaseProps & {
-	flexDirection?: "row" | "column";
-	alignItems?: "flex-start" | "center" | "flex-end";
-	justifyContent?: "flex-start" | "center" | "flex-end" | "space-between";
-	gap?: string;
-	children: ReactNode;
-};
+export type FlexProps = BaseProps &
+	RecipeVariants<typeof root> & {
+		children: ReactNode;
+	};
 
 const Flex = forwardRef<HTMLDivElement, FlexProps>(
 	(
@@ -17,15 +17,8 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>(
 		return (
 			<div
 				ref={ref}
-				style={{
-					display: "flex",
-					flexDirection,
-					alignItems,
-					justifyContent,
-					gap,
-					...sx,
-				}}
-				className={className}
+				className={`${root({ flexDirection, alignItems, justifyContent, gap })}${className ? ` ${className}` : ""}`}
+				style={sx}
 			>
 				{children}
 			</div>

@@ -4,7 +4,8 @@
 	"private": true,
 	"type": "module",
 	"sideEffects": [
-		"**/*.css"
+		"**/*.css",
+		"**/*.css.ts"
 	],
 	"files": [
 		"dist"
@@ -18,11 +19,14 @@
 			"import": "./dist/index.js",
 			"require": "./dist/index.cjs"
 		},
-		"./index.css": "./dist/index.css",
-		"./reset.css": "./dist/reset.css"
+		"./index.css": {
+			"types": "./dist/index.css.d.ts",
+			"default": "./dist/index.css"
+		}
 	},
 	"scripts": {
-		"build": "tsup",
+		"build": "tsup && npm run build:css-types",
+		"build:css-types": "node -e \"require('fs').writeFileSync('dist/index.css.d.ts', 'declare module \\\"@yeonji/ui/index.css\\\";\\n')\"",
 		"dev": "tsup --watch"
 	},
 	"peerDependencies": {
