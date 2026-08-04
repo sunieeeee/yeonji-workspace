@@ -5,6 +5,10 @@ import { globalStyle } from "@vanilla-extract/css";
  * http://meyerweb.com/eric/tools/css/reset/
  * 모든 기본 여백/테두리/폰트 크기를 초기화
  */
+globalStyle("*, *::before, *::after", {
+	boxSizing: "border-box",
+});
+
 globalStyle(
 	`html, body, div, span, applet, object, iframe,
    h1, h2, h3, h4, h5, h6, p, blockquote, pre,

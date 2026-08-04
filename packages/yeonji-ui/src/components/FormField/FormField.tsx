@@ -1,5 +1,5 @@
 import React, { useId } from "react";
-import { Label } from "../label";
+import { Label } from "../Label";
 import { BaseProps } from "../../types/base.types";
 import styles from "./FormField.module.css";
 
