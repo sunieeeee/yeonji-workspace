@@ -3,7 +3,7 @@ import { Box, Flex } from "@yeonji/ui";
 export default function Page() {
 	return (
 		<Flex
-			flexDirection="row"
+			flexDirection="column"
 			alignItems="center"
 			justifyContent="center"
 			gap="8"
