@@ -7,6 +7,9 @@ export const vars = createThemeContract({
 			default: null,
 			subtle: null,
 			elevated: null,
+			hover: null, // 추가
+			active: null, // 추가
+			disabled: null, // 추가
 		},
 		text: {
 			default: null,
@@ -19,6 +22,10 @@ export const vars = createThemeContract({
 		border: {
 			default: null,
 			strong: null,
+			hover: null, // 추가
+			active: null, // 추가
+			disabled: null, // 추가
+			focus: null, // 추가
 		},
 		action: {
 			primary: {

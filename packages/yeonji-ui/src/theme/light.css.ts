@@ -9,6 +9,9 @@ export const lightTheme = createTheme(vars, {
 			default: primitive.color.white,
 			subtle: primitive.color.gray[100],
 			elevated: primitive.color.white,
+			hover: primitive.color.gray[50],
+			active: primitive.color.gray[100],
+			disabled: primitive.color.gray[200],
 		},
 		text: {
 			default: primitive.color.gray[900],
@@ -21,6 +24,10 @@ export const lightTheme = createTheme(vars, {
 		border: {
 			default: primitive.color.gray[200],
 			strong: primitive.color.gray[300],
+			active: primitive.color.gray[400],
+			hover: primitive.color.gray[300],
+			disabled: primitive.color.gray[200],
+			focus: primitive.color.primary[500],
 		},
 		action: {
 			primary: {

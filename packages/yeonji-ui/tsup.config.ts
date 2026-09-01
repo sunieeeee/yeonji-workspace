@@ -28,5 +28,18 @@ export default defineConfig({
 	},
 
 	// .css.ts 파일을 진짜 CSS로 뽑아내는 플러그인 끼워넣기
-	esbuildPlugins: [vanillaExtractPlugin()],
+	esbuildPlugins: [
+		vanillaExtractPlugin({
+			identifiers: ({ debugId, hash, filePath }) => {
+				// "src/components/Flex/Flex.css.ts" -> "Flex"
+				const fileLabel = (filePath.split("/").pop() ?? "yj")
+					.replace(/\.css\.ts$/, "")
+					.replace(/[^a-zA-Z0-9_]/g, "-"); // 이름에 점(.)이 남으면 무효한 식별자가 되므로 치환
+
+				const suffix = debugId?.replace(/[^a-zA-Z0-9_-]/g, "-") ?? hash;
+
+				return `yj-${fileLabel}-${suffix}`;
+			},
+		}),
+	],
 });

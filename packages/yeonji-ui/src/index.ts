@@ -11,9 +11,10 @@ export { primitive } from "./theme/primitive.css";
 export { vars } from "./theme/contract.css";
 export { lightTheme } from "./theme/light.css";
 
+// shared export
+export { fieldTokens } from "./shared/field/field.tokens.css";
 // 컴포넌트 export
 export { Box } from "./components/Box";
 export { Flex } from "./components/Flex";
-export { FormField } from "./components/FormField";
 export { Input } from "./components/Input";
 export type { InputProps } from "./components/Input";
